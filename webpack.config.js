@@ -6,6 +6,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 // const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 const baseConfig = {
   entry: './src/index.ts',
@@ -32,6 +33,7 @@ const baseConfig = {
     new StylelintPlugin(),
     new HtmlWebpackPlugin({ title: 'mini build tool' }),
     new ForkTsCheckerWebpackPlugin(),
+    new ProgressBarPlugin(),
   ],
   module: {
     rules: [
