@@ -30,7 +30,7 @@ const baseConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new StylelintPlugin(),
+    new StylelintPlugin({ emitWarning: true }),
     new HtmlWebpackPlugin({ title: 'mini build tool' }),
     new ForkTsCheckerWebpackPlugin(),
     new ProgressBarPlugin(),
