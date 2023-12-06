@@ -4,7 +4,7 @@ import './style.scss';
 const ua = new UAParser();
 const deviceInfo = ua.getResult();
 
-document.write(`<p>${JSON.stringify(deviceInfo)}</p>`);
+document.write(`<p id="root">${JSON.stringify(deviceInfo)}</p>`);
 
 // // @ts-ignore
 // if (module.hot) {

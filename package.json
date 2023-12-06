@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0 <17.0.0"
+  },
   "scripts": {
     "watch": "webpack --watch",
     "build": "webpack --mode=production --progress",
+    "serve": "http-server ./dist -o",
     "start:qa": "webpack serve --mode=development",
     "start:prod": "webpack serve --mode=production"
   },
@@ -38,6 +42,7 @@
   },
   "dependencies": {
     "@types/ua-parser-js": "^0.7.35",
+    "http-server": "^14.1.1",
     "ua-parser-js": "^0.7.23"
   }
 }
